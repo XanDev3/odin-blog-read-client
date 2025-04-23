@@ -8,7 +8,7 @@ export default function Footer(){
         <FooterWrapper>
             Xander© 2024
             <GithubLink 
-             href="https://github.com/xandernesta/odin-blog-read-client"
+             href="https://github.com/xandev3/odin-blog-read-client"
              target="_blank"
              rel="noopener" >
             <FaGithub size="1.25em" /> 
