@@ -1,6 +1,6 @@
 # Odin Blog Read Client
 
-![Screenshot](./.jpg)
+<!-- ![Screenshot](./.jpg) -->
 
 
 **:point_right: See it live [here](https://xandev3.github.io/odin-blog-read-client/)**
