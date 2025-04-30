@@ -48,9 +48,22 @@ $ npm install
 - Populate `.env` located in server with the following environment variables:
   - `VITE_TINYMCE_API_KEY` = this is the api key required to use TinyMCE api editor. Sign up at https://www.tiny.cloud/auth/signup/ and register for a key to include here
 
+### Configuring API Connection
+
+The application uses axios to connect to the backend API. You'll need to configure the baseURL in `/src/lib/axios.js`:
+
+- For local development:
+  ```javascript
+  baseURL: 'http://localhost:3001/api/' // Update port number if your backend runs on a different port
+  ```
+- For production/deployed API:
+  ```javascript
+  baseURL: 'https://your-deployed-api-url.com/api/'
+  ```
+
 ### Starting the application
 
-From `odin-blog-api` directory, run the following commands:
+From `odin-blog-read-client` directory, run the following commands:
 
 ```bash
 

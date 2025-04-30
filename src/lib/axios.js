@@ -1,6 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://naughty-bat-spacesuit.cyclic.app/api/'
-    //http://localhost:3000/api/
+    baseURL: 'http://localhost:3001/api/' //for local development, backend is running on port 3001
 });

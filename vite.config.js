@@ -7,12 +7,18 @@ export default defineConfig({
   build: {
     outDir: "build"
   },
-  server: {
+  // glitch.me settings
+/*   server: {
     host:"0.0.0.0",
     port:3000,
     strictPort: true,
     hmr: {
       clientPort: 443 // Run the websocket server on the SSL port
     }
+  } */
+ // localhost settings
+  server: {
+    host:"localhost",
+    port:3000,
   }
 })

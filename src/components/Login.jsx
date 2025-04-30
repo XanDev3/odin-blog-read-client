@@ -38,9 +38,9 @@ const Login = () => {
           headers: { 'Content-Type': 'application/json' }
         }
       )
-      console.log(JSON.stringify(response?.data))
+/*       console.log(JSON.stringify(response?.data))
       console.log('full response')
-      console.log(JSON.stringify(response))
+      console.log(JSON.stringify(response)) */
       const token = response?.data?.token
       const isAdmin = response?.data?.admin
       const user = response?.data?.user
@@ -68,7 +68,7 @@ const Login = () => {
       <section className='login-section'>
         <p
           ref={errRef}
-          className={errMsg ? 'errmsg' : 'offscreen'}
+          className={errMsg ? 'errmsg' : 'offscreen'}  
           aria-live='assertive'
         >
           {errMsg}
