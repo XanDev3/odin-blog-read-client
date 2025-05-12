@@ -53,8 +53,9 @@ $ npm install
 The application uses axios to connect to the backend API. You'll need to configure the baseURL in `/src/lib/axios.js`:
 
 - For local development:
-  ```javascript
-  baseURL: 'http://localhost:3001/api/' // Update port number if your backend runs on a different port
+  ```Javascript
+  baseURL: 'http://localhost:3000/' // Update port number if your backend runs on a different port
+  info: 'http://localhost:3000/api-docs' //Swagger API information
   ```
 - For production/deployed API:
   ```javascript
@@ -73,11 +74,13 @@ $ npm run dev
 
 ## Technologies Used
 
-- [Nodejs](https://nodejs.org/)
-- [Expressjs](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoosejs](https://mongoosejs.com/)
+- [React](https://react.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [Axios](https://axios-http.com/docs/intro)
+- [Styled Components](https://styled-components.com/)
+- [Vite](https://vitejs.dev/)
 - [TinyMCE](https://www.tiny.cloud/)
+- [ESLint](https://eslint.org/)
 
 ## License
 
