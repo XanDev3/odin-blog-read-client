@@ -33,7 +33,8 @@ const Home = () => {
       <div className='home-header'>
         <div className='header-title'>
           <div className='header-title-wrap'>
-            <h1>Odin Blog</h1>
+            <h1>Welcome to My Blog</h1>
+            <h4>Read my blog posts. Share your thoughts.  Join the community.</h4>
           </div>
         </div>
       </div>

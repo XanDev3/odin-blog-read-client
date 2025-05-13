@@ -49,7 +49,7 @@ function Navbar () {
     <div className='header-item-container'>
       <div className='header-items-left'>
         <Link to='/' className='header-title-link header-item'>
-          <h1>Odin Blog Client</h1>
+          <h1>Home</h1>
         </Link>
       </div>
       <ul className='header-items-right'>
@@ -89,16 +89,23 @@ function Navbar () {
             </div>
           </div>
         ) : (
-          <CustomLink to='/login' state={{ from: location.pathname }}>
-            Login
-          </CustomLink>
+          <div className="header-links-container">
+            <CustomLink to='/login' state={{ from: location.pathname }}>
+              Login
+            </CustomLink>
+            <button className="signup-btn">
+              <CustomLink  to='/signup' state={{ from: location.pathname }}>
+                Register
+              </CustomLink>
+            </button>
+          </div>
         )}
       </ul>
     </div>
   )
 }
 
-function CustomLink ({ to, children, ...props }) {
+export function CustomLink ({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to)
   const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 

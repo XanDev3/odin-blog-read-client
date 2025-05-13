@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import useComments from '../hooks/useComments'
 import Comments from './Comments'
+import { CustomLink } from '../layouts/Navbar'
 
 const Post = () => {
   const [post, setPost] = useState({})
@@ -96,7 +97,7 @@ const Post = () => {
             </div>
           </div>
         </div>
-        <div className='posts-container'>
+        <div className='single-post-container'>
           <article key={post._id} className='post-page'>
             <div className='post-content'>{htmlParse(post.content)}</div>
             <div className='post-author'>By {post?.author[0].username}</div>
@@ -131,8 +132,11 @@ const Post = () => {
             </section>
           ) : (
             <p className='new-comment-no-user'>
-              {' '}
-              You must be logged in to add a comment.
+              Please{" "}
+              <Link to='/login' className="new-comment-login-link">
+              login
+              </Link>{" "}
+              to add a comment.
             </p>
           )}
           <Comments postId={post._id} updateComments={updateComments} ></Comments>
