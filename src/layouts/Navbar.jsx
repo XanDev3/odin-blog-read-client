@@ -1,4 +1,4 @@
-import './navbar.css'
+// import './navbar.css'
 import { useState } from 'react'
 import {
   Link,
@@ -46,18 +46,18 @@ function Navbar () {
       })
   }
   return (
-    <div className='header-item-container'>
-      <div className='header-items-left'>
+    <div className='header-item-container  bg-dark-navy flex justify-between items-center p-4 m-0'>
+      <div className='header-items-left flex items-center gap-4'>
         <Link to='/' className='header-title-link header-item'>
-          <h1>Home</h1>
+          <h1 className='hover:text-blue-700 transition-colors duration-200 font-work text-xl font-semibold'>Home</h1>
         </Link>
       </div>
-      <ul className='header-items-right'>
+      <ul className='header-items-right flex items-center gap-4'>
         {auth.token ? (
-          <div className='profile-div'>
+          <div className='profile-div !bg-color-dark-navy !border-none !outline-none '>
             <button
               id='open-user-menu'
-              className='profile-btn'
+              className='profile-btn !bg-dark-navy mr-8'
               onClick={() => {
                 setAccountMenuExpansion(prev => !prev)
               }}
@@ -65,7 +65,7 @@ function Navbar () {
               <img
                 src='/src/assets/user.png'
                 alt=''
-                className='profile-icon'
+                className='profile-icon w-8 h-8 rounded-full !bg-none !bg-dark-navy !p-0'
               ></img>
               {/* <span className='text-base text-gray-300'>
               <i
@@ -76,10 +76,10 @@ function Navbar () {
             </button>
             <div className='menu-container'>
               {isAccountMenuExpanded && (
-                <div className='acct-menu'>
-                  <p className='acct-username'>{auth.user}</p>
+                <div className='acct-menu absolute flex flex-col right-0 mr-4 mt-2 w-34 bg-gray-400 rounded-md shadow-lg py-2 z-10 border-rounded-md items-center-safe'>
+                  <p className='acct-username p-2'>{auth.user}</p>
                   <form onSubmit={handleLogout}>
-                    <button className='logout-btn'>Log Out</button>
+                    <button className='logout-btn hover:outline-2 hover:outline-btn-outline-blue '>Log Out</button>
                   </form>
                   {errMsg && 
                     <p>{errMsg}</p>
@@ -89,12 +89,12 @@ function Navbar () {
             </div>
           </div>
         ) : (
-          <div className="header-links-container">
-            <CustomLink to='/login' state={{ from: location.pathname }}>
+          <div className="header-links-container flex items-center gap-4 ">
+            <CustomLink className="hover:text-blue-700 transition-colors duration-200 font-work text-lg" to='/login' state={{ from: location.pathname }}>
               Login
             </CustomLink>
-            <button className="signup-btn">
-              <CustomLink  to='/signup' state={{ from: location.pathname }}>
+            <button className="signup-btn button !p-1.5 bg-btn-blue hover:outline-2 hover:outline-btn-outline-blue active:outline-2 vistied:outline-btn-outline-blue">
+              <CustomLink  className="text-lg" to='/signup' state={{ from: location.pathname }}>
                 Register
               </CustomLink>
             </button>

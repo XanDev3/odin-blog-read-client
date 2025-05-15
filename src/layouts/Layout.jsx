@@ -14,13 +14,13 @@ const MainContainer = styled.div`
 
 const Layout = () => {
   return (
-    <>
+    <div className='layout min-h-screen flex flex-col bg-gray-700 dark:text-white light:text-black font-work'>
       <Navbar />
-      <MainContainer>
+      <main className="flex-grow">
         <Outlet />
-        <Footer />
-      </MainContainer>
-    </>
+      </main>
+      <Footer />
+    </div>
   )
 }
 

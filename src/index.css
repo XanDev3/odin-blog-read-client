@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', 'sans-serif';
+  --font-josefin: 'Josefin Sans', 'sans-serif';
+  --font-work: 'Work Sans', 'sans-serif';
+  --font-lora: 'Lora', 'serif';
+  --font-varela: 'Varela', 'sans-serif';
+  --color-btn-blue: rgb(32, 32, 244);
+  --color-btn-outline-blue: #646cff;
+  --color-dark-navy: rgb(10, 10, 35)
+}
 :root {
   font-family: Inter, "Josefin Sans", "Work Sans", Lora, Varela, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
@@ -13,15 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
+/* h1 {
   font-size: 2.2rem;
   line-height: 1;
-}
-h2 {
+} */
+/* h2 {
   font-size: 2rem;
   line-height: 1;
-}
-h3{
+} */
+/* h3{
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -32,30 +45,30 @@ h4{
 h5{
   font-size: 1.2rem;
   line-height: 1;
-}
-
+} */
+/* 
 a{
   text-decoration: none;
   color: inherit;
-}
+} */
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-btn-blue);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+/* button:hover {
+  border-color: var(--color-btn-outline-blue);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

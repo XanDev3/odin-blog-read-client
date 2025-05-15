@@ -1,4 +1,4 @@
-.header-item-container {
+/* .header-item-container {
   min-width: 100%;
   height: 4rem;
   position: sticky;
@@ -10,8 +10,9 @@
   padding: 0;
   margin: 0;
   /* box-shadow: 0 6px 5px rgba(0,0,0,.4); */
+  /*
   z-index: 10;
-}
+} */
 .signup-btn:has(.active) {
   border: 2px solid #646cff;
 }
@@ -36,7 +37,7 @@
   font-weight: 400;
 }
 .header-title-link:hover{
-    color: rgb(55, 55, 255);
+    color: #3737ff;
 }
 .header-items-right {
   flex: 3;
