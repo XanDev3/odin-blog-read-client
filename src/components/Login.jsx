@@ -65,7 +65,7 @@ const Login = () => {
   }
   return (
     <>
-      <section className='login-section'>
+      <section className='login-section text-center p-4 mt-8 gap-4 h-max-screen flex flex-col justify-center items-center'>
         <p
           ref={errRef}
           className={errMsg ? 'errmsg' : 'offscreen'}  
@@ -73,11 +73,12 @@ const Login = () => {
         >
           {errMsg}
         </p>
-        <h1>Log In</h1>
-        <form onSubmit={handleSubmit} className='login-form'>
+        <h1 className="text-2xl">Log In</h1>
+        <form onSubmit={handleSubmit} className='login-form flex flex-col items-center gap-4'>
           <input
             type='text'
             id='username'
+            className="mt-2 p-2 h-12 w-84 rounded-md border-2 border-gray-300 focus:outline-none focus:border-sky-blue"
             placeholder='Username'
             ref={userRef}
             autoComplete='off'
@@ -88,17 +89,18 @@ const Login = () => {
           <input
             type='password'
             id='password'
+            className="mt-2 p-2 h-12 w-84 rounded-md border-2 border-gray-300 focus:outline-none focus:border-sky-blue"
             placeholder='Password'
             onChange={e => setPwd(e.target.value)}
             value={pwd}
             required
           />
-          <button className='login-button'>Log In</button>
+          <button className='login-button !mt-8 gap-4 hover:outline-2 hover:outline-btn-outline-blue'>Log In</button>
         </form>
       </section>
-      <p className='signup-p'>
+      <p className='signup-p text-center'>
         Don't have an account yet?
-        <Link to='/signup' className='signup-link'>
+        <Link to='/signup' className='signup-link ml-1 p-0.5 text-sky-blue hover:text-my-blue'>
           Sign Up Here
         </Link>
       </p>

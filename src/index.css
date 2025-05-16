@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,11 +7,15 @@
   --font-work: 'Work Sans', 'sans-serif';
   --font-lora: 'Lora', 'serif';
   --font-varela: 'Varela', 'sans-serif';
+  --font-montserrat: 'Montserrat', 'sans-serif';
   --color-btn-blue: rgb(32, 32, 244);
   --color-btn-outline-blue: #646cff;
   --color-my-blue: rgb(55, 55, 255);
   --color-dark-navy: rgb(10, 10, 35);
   --color-sky-blue: rgb(97, 218, 251);
+  --color-feint-green: rgb(152, 216, 184);
+  --color-see-through-green: rgba(129, 230, 217, 0.16);
+  --color-white-background: rgba(246, 248, 248, 0.9);
 }
 :root {
   font-family: Inter, "Josefin Sans", "Work Sans", Lora, Varela, system-ui, Avenir, Helvetica, Arial, sans-serif;

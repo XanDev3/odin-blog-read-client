@@ -64,7 +64,7 @@ const Signup = () => {
   }
   return (
     <>
-      <section className='signup-section '>
+      <section className='signup-section text-center p-4 mt-8 gap-4 h-max-screen flex flex-col justify-center items-center'>
         <p
           ref={errRef}
           className={errMsg ? 'errmsg' : 'offscreen'}
@@ -72,11 +72,12 @@ const Signup = () => {
         >
           {errMsg}
         </p>
-        <h1>Sign Up</h1>
-        <form onSubmit={handleSubmit} className='signup-form login-form'>
+        <h1 className="text-2xl">Sign Up</h1>
+        <form onSubmit={handleSubmit} className='signup-form login-form flex flex-col items-center gap-4'>
           <input
             type='text'
             id='username'
+            className="mt-2 p-2 h-12 w-84 rounded-md border-2 border-gray-300 focus:outline-none focus:border-sky-blue"
             placeholder='Username'
             ref={userRef}
             autoComplete='off'
@@ -87,12 +88,13 @@ const Signup = () => {
           <input
             type='password'
             id='password'
+            className="mt-2 p-2 h-12 w-84 rounded-md border-2 border-gray-300 focus:outline-none focus:border-sky-blue"
             placeholder='Password'
             onChange={e => setPwd(e.target.value)}
             value={pwd}
             required
           />
-          <button className='signup-button'>Sign Up</button>
+          <button className='signup-button !mt-8 gap-4 hover:outline-2 hover:outline-btn-outline-blue'>Sign Up</button>
         </form>
       </section>
     </>

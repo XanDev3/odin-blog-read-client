@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa6'
 
 export default function Footer(){
     return(
-        <footer className="footer fixed bottom-0 flex items-center justify-center w-full p-3 text-xl bg-dark-navy text-sky-blue">
+        <footer className="footer bottom-0 flex items-center justify-center w-full p-3 mt-3 text-xl bg-dark-navy text-sky-blue">
             Xander© 2024
             {/* <GithubLink  */}
             <a

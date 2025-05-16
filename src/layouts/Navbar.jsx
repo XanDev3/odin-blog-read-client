@@ -1,4 +1,3 @@
-// import './navbar.css'
 import { useState } from 'react'
 import {
   Link,
@@ -89,12 +88,12 @@ function Navbar () {
             </div>
           </div>
         ) : (
-          <div className="header-links-container flex items-center gap-4 ">
-            <CustomLink className="hover:text-blue-700 transition-colors duration-200 font-work text-lg focus:border-b-2 focus:border-btn-outline-blue" to='/login' state={{ from: location.pathname }}>
+          <div className="header-links-container flex items-center gap-4">
+            <CustomLink className="hover:text-blue-700 transition-colors duration-200 font-work text-lg" to='/login' state={{ from: location.pathname }}>
               Login
             </CustomLink>
-            <button className="signup-btn button !p-1.5 bg-btn-blue hover:outline-2 hover:outline-btn-outline-blue active:outline-2 vistied:outline-btn-outline-blue">
-              <CustomLink  className="text-lg" to='/signup' state={{ from: location.pathname }}>
+            <button className="signup-btn button !p-1.5 bg-btn-blue hover:outline-2 hover:outline-btn-outline-blue has-[.active]:outline-2 has-[.active]:outline-btn-outline-blue">
+              <CustomLink  className="text-lg " to='/signup' state={{ from: location.pathname }}>
                 Register
               </CustomLink>
             </button>
@@ -110,8 +109,8 @@ export function CustomLink ({ to, children, ...props }) {
   const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
   return (
-    <li className={isActive ? 'active header-item' : 'header-item'}>
-      <Link to={to} {...props}>
+    <li className={isActive && to !== '/signup' ? 'header-item border-b-2 border-btn-outline-blue' : 'header-item'}>
+      <Link id={to} to={to} {...props}>
         {children}
       </Link>
     </li>

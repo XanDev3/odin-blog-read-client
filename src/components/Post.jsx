@@ -103,11 +103,11 @@ const Post = () => {
             <div className='post-author'>By {post?.author[0].username}</div>
           </article>
         </div>
-        <div className='comments-container'>
-          <h3 className='comments-title'>Comments</h3>
+        <div className='comments-container m-8 w-xl mx-auto'>
+          <h3 className='comments-title text-3xl mb-4'>Comments</h3>
           {auth?.token ? (
-            <section id='new-comment' className='new-comment'>
-              <p className='new-comment-title'>
+            <section id='new-comment' className='new-comment border-b-2 border-gray-800'>
+              <p className='new-comment-title text-left my-2'>
                 Comment on the post '{post?.title}'
               </p>
               <form className='new-comment-form' onSubmit={handleCommentSubmit}>
@@ -119,10 +119,11 @@ const Post = () => {
                   value={newComment}
                   minLength='2'
                   required=''
+                  className='new-comment-input block w-xl h-16 p-2 mb-8 opacity-54 text-md placeholder:bg-[rgb(217, 220, 231)] border-2 rounded border-gray-800' 
                 ></textarea>
-                <div className='new-comment-btn-container'>
+                <div className='new-comment-btn-container flex gap-2'>
                   <button
-                    className='new-comment-btn submit'
+                    className='new-comment-btn submit mb-2 disabled:cursor-not-allowed hover:outline-2 hover:outline-btn-outline-blue'
                     disabled={newComment.length < 2}
                   >
                     Submit
@@ -131,9 +132,9 @@ const Post = () => {
               </form>
             </section>
           ) : (
-            <p className='new-comment-no-user'>
+            <p className='new-comment-no-user w-xl pb-4 text-left block no-underline border-b-2 border-gray-800'>
               Please{" "}
-              <Link to='/login' className="new-comment-login-link">
+              <Link to='/login' state={{from: location.pathname}} className="new-comment-login-link text-sky-blue hover:text-my-blue">
               login
               </Link>{" "}
               to add a comment.
