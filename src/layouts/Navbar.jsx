@@ -46,7 +46,7 @@ function Navbar () {
       })
   }
   return (
-    <div className='header-item-container  bg-dark-navy flex justify-between items-center p-4 m-0'>
+    <div className='header-item-container top-0 left-0 sticky z-10 bg-dark-navy flex justify-between items-center p-4 m-0'>
       <div className='header-items-left flex items-center gap-4'>
         <Link to='/' className='header-title-link header-item'>
           <h1 className='hover:text-blue-700 transition-colors duration-200 font-work text-xl font-semibold'>Home</h1>
@@ -90,7 +90,7 @@ function Navbar () {
           </div>
         ) : (
           <div className="header-links-container flex items-center gap-4 ">
-            <CustomLink className="hover:text-blue-700 transition-colors duration-200 font-work text-lg" to='/login' state={{ from: location.pathname }}>
+            <CustomLink className="hover:text-blue-700 transition-colors duration-200 font-work text-lg focus:border-b-2 focus:border-btn-outline-blue" to='/login' state={{ from: location.pathname }}>
               Login
             </CustomLink>
             <button className="signup-btn button !p-1.5 bg-btn-blue hover:outline-2 hover:outline-btn-outline-blue active:outline-2 vistied:outline-btn-outline-blue">

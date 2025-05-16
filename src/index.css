@@ -9,7 +9,9 @@
   --font-varela: 'Varela', 'sans-serif';
   --color-btn-blue: rgb(32, 32, 244);
   --color-btn-outline-blue: #646cff;
-  --color-dark-navy: rgb(10, 10, 35)
+  --color-my-blue: rgb(55, 55, 255);
+  --color-dark-navy: rgb(10, 10, 35);
+  --color-sky-blue: rgb(97, 218, 251);
 }
 :root {
   font-family: Inter, "Josefin Sans", "Work Sans", Lora, Varela, system-ui, Avenir, Helvetica, Arial, sans-serif;

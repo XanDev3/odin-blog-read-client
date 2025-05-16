@@ -6,6 +6,7 @@ import Home from './components/Home.jsx'
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
 import Post from './components/Post.jsx'
+import NotFound from './components/NotFound.jsx'
 
 function App () {
   return (
@@ -24,7 +25,7 @@ function App () {
           
 {/*           </Route> */}
           {/* catch all */}
-{/*           <Route path='*' element={<Missing />} /> */}
+          <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
     </>
