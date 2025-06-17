@@ -50,7 +50,7 @@ const Comments = ({postId, updateComments} ) => {
           const capFirst = (str) => str.charAt(0).toUpperCase()+ str.slice(1)
           return (
             <article key={comment._id} className='comment-card w-xl mx-auto border-2 border-see-through-green shadow-3xl rounded-lg my-4 p-4 text-background-white'>
-              <h5 className='comment-author text-2xl font-bold'>{capFirst(comment?.author.username)} <span className='text-xl font-normal'>said:</span></h5>
+              <h5 className='comment-author text-2xl font-bold text-left mt-2 ml-2'>{capFirst(comment?.author.username)} <span className='text-xl font-normal'>said:</span></h5>
               <div className="comment-card-content text-center text-xl p-4">{comment.content}</div>
               <div className='comment-card-date text-right text-feint-green text-[.8rem] font-montserrat font-extrabold '><span className='px-1 py-0.5 rounded-2xl bg-see-through-green'>{date}</span></div>
               

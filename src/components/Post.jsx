@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react'
 import axios from '../lib/axios'
-import htmlParse from 'html-react-parser'
+import parse from 'html-react-parser'
+import { decode } from 'html-entities';
 import { Link, useParams } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import useComments from '../hooks/useComments'
 import Comments from './Comments'
-import { CustomLink } from '../layouts/Navbar'
+import Prism from 'prismjs'
+import '../prism.css'
 
 const Post = () => {
   const [post, setPost] = useState({})
-  const {comments, setComments} = useComments()
+  // const {comments, setComments} = useComments()
   const [newComment, setNewComment] = useState('')
   const [updateComments, setUpdateComments] = useState(false)
   const [errMsg, setErrMsg] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const { id } = useParams()
   const { auth } = useAuth()
+  const decodedContent = decode(post?.content || '');
+  
 
   const date = new Date(post.updatedAt).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -41,6 +45,10 @@ const Post = () => {
         }
       })
   }, [])
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [decodedContent]);
   
   const handleCommentChange = e => {
     setNewComment(e.target.value)
@@ -89,18 +97,18 @@ const Post = () => {
   } else if (post.isPublished) {
     return (
       <>
-        <div className='home-header'>
-          <div className='header-title'>
-            <div className='header-title-wrap'>
-              <h1>{post?.title}</h1>
-              <h4 className='post-date'>{date}</h4>
+        <div className='home-header bg-dark-navy min-h-[16rem] w-100% flex flex-col items-center justify-center mb-12'>
+          <div className='header-title text-center'>
+            <div className='header-title-wrap max-w-6xl my-0 mx-auto p-4'>
+              <h1 className='text-6xl text-[#fff] mb-2'>{post?.title}</h1>
+              <h4 className='post-date text-xl m-0'>{date}</h4>
             </div>
           </div>
         </div>
-        <div className='single-post-container'>
-          <article key={post._id} className='post-page'>
-            <div className='post-content'>{htmlParse(post.content)}</div>
-            <div className='post-author'>By {post?.author[0].username}</div>
+        <div className='single-post-container font-work max-w-4xl my-1 mx-auto py-0 px-6'>
+          <article key={post._id} className='post-page bg-white-background shadow-3xl rounded-[3px] text-font-black py-4 px-8 mb-16 '>
+            <div className='post-content mb-4'>{parse(decodedContent)}</div>
+            <div className='post-author mt-4 font-gray-500'>By {post?.author[0].username}</div>
           </article>
         </div>
         <div className='comments-container m-8 w-xl mx-auto'>

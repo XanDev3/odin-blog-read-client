@@ -16,14 +16,10 @@ function App () {
           {/* public routes */}
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<Signup />} />
-{/*           <Route path='unauthorized' element={<Unauthorized />} /> */}
-          {/*  protected routes */}
-{/*           <Route element={<RequireAuth />}> */}
             <Route path='/' element={<Home />} />
             <Route path='/posts/:id' element={<Post />} />
             <Route path='logout' element={<Layout />} />
-          
-{/*           </Route> */}
+
           {/* catch all */}
           <Route path='*' element={<NotFound />} />
         </Route>

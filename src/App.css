@@ -6,52 +6,52 @@ body {
   margin: 0;
 }
 /* Home Page*/
-.body-container {
+/* .body-container {
   text-align: center;
   height: 100%;
-}
+} */
 
-.home-header {
+/* .home-header {
   min-height: 16rem;
 /*   background-image: linear-gradient(
     rgba(106, 228, 255, 0.8),
     rgba(102, 167, 253, 0.233)
   ); */
-  background-color: rgb(10, 10, 35);
+ /* background-color: rgb(10, 10, 35);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-}
+} */
 
-.header-title {
+/* .header-title {
   text-align: center;
   width: 100%;
   z-index: 1;
-}
+} */
 
-.header-title-wrap {
+/* .header-title-wrap {
   max-width: 700px;
   margin: 0 auto;
   padding: 1rem;
-}
+} */
 
-.header-title h1 {
+/* .header-title h1 {
   font-size: 3rem;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   margin-bottom: 1rem;
-}
+} */
 
-.header-title h4 {
+/* .header-title h4 {
   color: #fff;
   font-size: 1.2rem;
   margin-top: 0;
-}
+} */
 
-.posts-container {
+/* .posts-container {
   font-family: "Work Sans", sans-serif;
   max-width: 1200px;
   margin: 0 auto;
@@ -59,8 +59,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 40px;
-}
-@media screen and (min-width: 675px) {
+} */
+/* @media screen and (min-width: 675px) {
   .posts-container {
     margin: 0 3rem;
     padding: 0 1rem;
@@ -68,7 +68,7 @@ body {
     grid-template-columns: repeat(2fr, minmax(0, 1fr));
     grid-column-gap: 2rem;
   }
-}
+} */
 /* @media screen and (max-width: 835px) {
   .posts-container {
     margin: 0 auto;
@@ -78,15 +78,15 @@ body {
     grid-column-gap: 2rem;
   }
 } */
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .posts-container {
     margin: 0 4rem;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(2fr, minmax(0, 1fr));
   }
-}
-.post-card {
+} */
+/* .post-card {
   background-color: rgba(246, 248, 248, 0.9);
   box-shadow: 0 0 0 0, 0 8px 16px rgba(20, 20, 20, 0.8);
   border-radius: 6px;
@@ -100,15 +100,15 @@ body {
 
 .post-card:hover {
   transform: translateY(-5px);
-}
+} */
 
-.post-card-title {
+/* .post-card-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
-}
+} */
 
-.post-card-content {
+/* .post-card-content {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -116,40 +116,40 @@ body {
   line-height: 1.6;
   flex-grow: 1;
   margin-bottom: 1rem;
-}
+} */
 
-.post-card-date {
+/* .post-card-date {
   text-align: right;
   color: gray;
   font-size: 0.9rem;
   margin-top: auto;
-}
+} */
 
 /* Individual Post Page*/
-.single-post-container {
+/* .single-post-container {
   font-family: "Work Sans", sans-serif;
   max-width: 1200px;
   margin: 0.5rem auto;
   padding: 0 1.5rem;
-}
-.post-page {
+} */
+/* .post-page {
   background-color: rgba(246, 248, 248, 0.9);
   box-shadow: 0 0 0 0, 0 8px 16px rgba(20, 20, 20, 0.8);
   border-radius: 3px;
   color: rgba(34, 34, 34, 0.95);
   padding: 1rem 2rem;
   margin-bottom: 4rem;
-}
-.post-date {
+} */
+/* .post-date {
   margin: 0;
-}
-.post-author {
+} */
+/* .post-author {
   margin-top: 1rem;
   color: gray;
 }
 .post-content {
   margin-bottom: 1rem;
-}
+} */
 /* Comments Section of Post Page */
 /* .comments-container {
   margin: 2rem;
@@ -219,10 +219,10 @@ body {
   padding: 1rem;
   margin-top: 2rem;
 } */
-.comment-author{
+/* .comment-author{
   text-align: left;
   margin: .5rem 0 0 .5rem;
-}
+} */
 /* .comment-card-content{
   padding: 1rem;
   font-size: 1.5rem;

@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthProvider.jsx'
 import { CommentsProvider } from './context/CommentsProvider.jsx'
 import App from './App.jsx'
 import './index.css'
+import './prism.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
